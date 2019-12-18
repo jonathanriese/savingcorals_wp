@@ -16,6 +16,7 @@ $titlefont: Monument Extended;
 $bodyfont: Gosha Sans Regular;
 $titlesize: 9vw;
 $bodysize: 16px;
+$captionsize: 12px;
 $screen-small: 600px;
 $screen-wide: 1025px;
 
@@ -105,7 +106,7 @@ h2 {
   }
 }
 
-h3 {
+h3, h4 {
   font-size: 2.5rem;
   line-height: 4rem;
 }
@@ -124,6 +125,7 @@ a {
 figcaption {
   font-family: Gosha Sans Light;
   text-align: center;
+  font-size: $captionsize;
   @include respondTo (wide-screens) {
     font-size: 1.5vw;
   }
@@ -133,8 +135,22 @@ figcaption {
       text-decoration: underline;
     }
   }
-  &.hide {
-    display: none;
+}
+
+figure.wp-block-image + p, figure.wp-block-embed + p {
+  margin-top: 1rem;
+}
+
+.wp-block-gallery .blocks-gallery-grid .blocks-gallery-item  {
+  margin: 0 0 32px 0;
+}
+
+.wp-block-gallery .blocks-gallery-item figcaption.blocks-gallery-item__caption {
+  bottom: -2.5rem;
+  font-size: $captionsize;
+  padding: 0;
+  @include respondTo (wide-screens) {
+    font-size: 1.5vw;
   }
 }
 
@@ -304,7 +320,7 @@ main {
   flex-flow: column nowrap;
 }
 
-main p, main h3 {
+main p, h3, figcaption, h4 {
   padding: 1rem 16px;
   @include respondTo(medium-screens) {
     padding: 1rem calc(3vw);
@@ -314,37 +330,47 @@ main p, main h3 {
   }
 }
 
-main h3 {
+h3 {
   padding-top: 6rem;
+  padding-bottom: 4rem;
 }
 
-img {
+h4 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+#info img {
   width: 100%;
   height: auto;
+  max-height: 75vh;
+  object-fit: cover;
   @include respondTo(wide-screens) {
     padding-left: 130px;
     width: calc(100vw - 260px);
   }
 }
 
-.description {
-  font-family: Gosha Sans Light;
-  margin-top: 3vw;
-  font-size: 12px;
-  text-align: center;
-  @include respondTo (wide-screens) {
-    font-size: 1.5vw;
+.wp-block-gallery .blocks-gallery-grid {
+  cursor: url(http://jonathanriese.com/aau/web3/wp/wp-content/themes/saving_corals/img/arrow-right.svg), e-resize;
+  li {
+    display: block;
   }
-  a {
-    color: #c09ce0;
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-  &.hide {
+  li + li {
     display: none;
   }
 }
+
+.wp-block-gallery .blocks-gallery-grid.second-image {
+  cursor: url(http://jonathanriese.com/aau/web3/wp/wp-content/themes/saving_corals/img/arrow-left.svg), w-resize;
+  li {
+    display: none;
+  }
+  li + li {
+    display: block;
+  }
+}
+
 
 iframe {
   width: 100%;
@@ -356,9 +382,54 @@ iframe {
   }
 }
 
-.section {
+div.wp-block-group__inner-container {
+  padding: 0 16px;
+  display: flex;
+  flex-flow: column nowrap;
+  @include respondTo(medium-screens) {
+    padding: 0 3vw;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+  @include respondTo(wide-screens) {
+    padding: 0 calc(3vw + 130px);
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+}
+
+.card {
   width: 100%;
-  margin-top: 12vw;
+  font-family: Gosha Sans Light;
+  padding: 0;
+  @include respondTo(medium-screens) {
+    width: 45%;
+  }
+  @include respondTo(wide-screens) {
+    font-size: 1.5vw;
+    line-height: 2.5vw;
+    width: 45%;
+  }
+  strong {
+    font-family: $bodyfont;
+    @include respondTo (wide-screens){
+      font-size: 2vw;
+      line-height: 4vw;
+      padding-bottom: 1vw;
+    }
+  }
+  a {
+    color: #c09ce0;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+p.card {
+  margin: 0;
+  margin-block-start: 0;
+  margin-block-end: 2rem;
 }
 
 
@@ -367,10 +438,13 @@ iframe {
 .footer {
   align-items: flex-end;
   display: flex;
-  font-size: 5vw;
+  font-size: 2rem;
   justify-content: space-between;
   margin-top: 2rem;
   padding: 16px;
+  @include respondTo(wide-screens) {
+    font-size: 5vw;
+  }
   svg {
     position: relative;
     top: -8px;

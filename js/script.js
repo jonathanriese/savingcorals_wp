@@ -1,22 +1,22 @@
-$(document).ready(function(){
-  $(".menu-icon").click(function(){
-    $(".bar1, .bar2, .bar3").toggleClass("change");
-    $(".menu-overlay").toggleClass("show");
+jQuery(document).ready(function(){
+
+  jQuery(".menu-icon").click(function(){
+    jQuery(".bar1, .bar2, .bar3").toggleClass("change");
+    jQuery(".menu-overlay").toggleClass("show");
   });
 
-  $('a[href*="#"]').on('click', function(e) {
+  jQuery('a[href*="#"]').on('click', function(e) {
     e.preventDefault()
-    $('html, body').animate(
+    jQuery('html, body').animate(
       {
-        scrollTop: $($(this).attr('href')).offset().top,
+        scrollTop: jQuery(jQuery(this).attr('href')).offset().top,
       },
       800,
       'swing'
     )
   });
 
-  $(".s3 .coral").click(function(){
-    $(".s3 .coral").toggleClass("hide");
-    $(".s3 .description").toggleClass("hide");
+  jQuery(".blocks-gallery-item").click(function(){
+    jQuery(".blocks-gallery-grid").toggleClass("second-image");
   });
 });

@@ -22,7 +22,6 @@
 
         <title><?php bloginfo('title'); ?></title>
         <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" />
-        <link rel="icon" href="img/icon.png" />
         <?php wp_head(); ?>
 
     </head>

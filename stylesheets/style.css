@@ -84,12 +84,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   font-family: Monument Extended;
   src: url("fonts/MonumentExtended-Regular.otf");
 }
-/* line 72, ../sass/style.scss */
+/* line 73, ../sass/style.scss */
 ::selection {
   background-color: #8039c0;
 }
 
-/* line 76, ../sass/style.scss */
+/* line 77, ../sass/style.scss */
 html {
   color: white;
   background-color: black;
@@ -100,20 +100,20 @@ html {
   -webkit-font-smoothing: antialiased;
 }
 @media only screen and (min-width: 1025px) {
-  /* line 76, ../sass/style.scss */
+  /* line 77, ../sass/style.scss */
   html {
     font-size: 2vw;
     line-height: 4vw;
   }
 }
 
-/* line 90, ../sass/style.scss */
+/* line 91, ../sass/style.scss */
 p {
   margin: 3rem 0;
   text-shadow: #000 2px 0 10px;
 }
 
-/* line 95, ../sass/style.scss */
+/* line 96, ../sass/style.scss */
 h2 {
   cursor: pointer;
   font-family: Monument Extended;
@@ -126,68 +126,88 @@ h2 {
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 2px;
 }
-/* line 103, ../sass/style.scss */
+/* line 104, ../sass/style.scss */
 h2:hover {
   -webkit-text-fill-color: white;
   transition: 0.5s;
 }
 
-/* line 108, ../sass/style.scss */
-h3 {
+/* line 109, ../sass/style.scss */
+h3, h4 {
   font-size: 2.5rem;
   line-height: 4rem;
 }
 
-/* line 113, ../sass/style.scss */
+/* line 114, ../sass/style.scss */
 a {
   color: #8039c0;
   text-decoration: none;
 }
-/* line 116, ../sass/style.scss */
+/* line 117, ../sass/style.scss */
 a:hover {
   color: white;
 }
-/* line 119, ../sass/style.scss */
+/* line 120, ../sass/style.scss */
 a svg:hover {
   fill: white;
 }
 
-/* line 124, ../sass/style.scss */
+/* line 125, ../sass/style.scss */
 figcaption {
   font-family: Gosha Sans Light;
   text-align: center;
+  font-size: 12px;
 }
 @media only screen and (min-width: 1025px) {
-  /* line 124, ../sass/style.scss */
+  /* line 125, ../sass/style.scss */
   figcaption {
     font-size: 1.5vw;
   }
 }
-/* line 130, ../sass/style.scss */
+/* line 132, ../sass/style.scss */
 figcaption a {
   color: #c09ce0;
 }
-/* line 132, ../sass/style.scss */
+/* line 134, ../sass/style.scss */
 figcaption a:hover {
   text-decoration: underline;
 }
-/* line 136, ../sass/style.scss */
-figcaption.hide {
-  display: none;
+
+/* line 140, ../sass/style.scss */
+figure.wp-block-image + p, figure.wp-block-embed + p {
+  margin-top: 1rem;
 }
 
-/* line 141, ../sass/style.scss */
+/* line 144, ../sass/style.scss */
+.wp-block-gallery .blocks-gallery-grid .blocks-gallery-item {
+  margin: 0 0 32px 0;
+}
+
+/* line 148, ../sass/style.scss */
+.wp-block-gallery .blocks-gallery-item figcaption.blocks-gallery-item__caption {
+  bottom: -2.5rem;
+  font-size: 12px;
+  padding: 0;
+}
+@media only screen and (min-width: 1025px) {
+  /* line 148, ../sass/style.scss */
+  .wp-block-gallery .blocks-gallery-item figcaption.blocks-gallery-item__caption {
+    font-size: 1.5vw;
+  }
+}
+
+/* line 157, ../sass/style.scss */
 .reflected {
   transform: rotate(180deg);
 }
 
-/* line 145, ../sass/style.scss */
+/* line 161, ../sass/style.scss */
 .transparent {
   cursor: default;
   opacity: 0;
 }
 
-/* line 152, ../sass/style.scss */
+/* line 168, ../sass/style.scss */
 nav {
   align-items: center;
   display: flex;
@@ -197,7 +217,7 @@ nav {
   width: 100vw;
   z-index: 9;
 }
-/* line 160, ../sass/style.scss */
+/* line 176, ../sass/style.scss */
 nav .logo {
   color: white;
   font-size: 1rem;
@@ -205,20 +225,20 @@ nav .logo {
   text-transform: lowercase;
 }
 @media only screen and (min-width: 1025px) {
-  /* line 160, ../sass/style.scss */
+  /* line 176, ../sass/style.scss */
   nav .logo {
     font-size: 0.7rem;
   }
 }
 
-/* line 173, ../sass/style.scss */
+/* line 189, ../sass/style.scss */
 .menu-icon {
   cursor: pointer;
   transform: scale(0.7);
   margin-right: 14px;
 }
 
-/* line 179, ../sass/style.scss */
+/* line 195, ../sass/style.scss */
 .bar1,
 .bar2,
 .bar3 {
@@ -229,34 +249,34 @@ nav .logo {
   width: 25px;
 }
 
-/* line 189, ../sass/style.scss */
+/* line 205, ../sass/style.scss */
 .change {
   transition: 0.5s;
 }
 
-/* line 193, ../sass/style.scss */
+/* line 209, ../sass/style.scss */
 .bar1.change {
   transform: rotate(-45deg) translate(-7px, 6px);
   -webkit-transform: rotate(-45deg) translate(-7px, 6px);
 }
 
-/* line 198, ../sass/style.scss */
+/* line 214, ../sass/style.scss */
 .bar2.change {
   opacity: 0;
 }
 
-/* line 202, ../sass/style.scss */
+/* line 218, ../sass/style.scss */
 .bar3.change {
   transform: rotate(45deg) translate(-6px, -4px);
   -webkit-transform: rotate(45deg) translate(-6px, -4px);
 }
 
-/* line 209, ../sass/style.scss */
+/* line 225, ../sass/style.scss */
 .menu-overlay {
   display: none;
   z-index: 8;
 }
-/* line 212, ../sass/style.scss */
+/* line 228, ../sass/style.scss */
 .menu-overlay.show {
   align-items: center;
   background-color: rgba(0, 0, 0, 0.9);
@@ -268,12 +288,12 @@ nav .logo {
   height: 100vh;
 }
 @media only screen and (max-width: 600px) {
-  /* line 212, ../sass/style.scss */
+  /* line 228, ../sass/style.scss */
   .menu-overlay.show {
     background-color: black;
   }
 }
-/* line 224, ../sass/style.scss */
+/* line 240, ../sass/style.scss */
 .menu-overlay li {
   margin: 2.5rem 0;
   text-align: center;
@@ -284,13 +304,13 @@ nav .logo {
   -webkit-text-stroke-color: white;
   -webkit-text-fill-color: transparent;
 }
-/* line 230, ../sass/style.scss */
+/* line 246, ../sass/style.scss */
 .menu-overlay li:hover {
   -webkit-text-fill-color: white;
   transition: 0.3s;
 }
 
-/* line 237, ../sass/style.scss */
+/* line 253, ../sass/style.scss */
 .overlay-footer {
   align-items: center;
   bottom: 0;
@@ -303,12 +323,12 @@ nav .logo {
   width: calc(100vw - 40px);
 }
 
-/* line 249, ../sass/style.scss */
+/* line 265, ../sass/style.scss */
 .current-menu-item {
   -webkit-text-fill-color: white;
 }
 
-/* line 255, ../sass/style.scss */
+/* line 271, ../sass/style.scss */
 div.cover {
   align-items: center;
   justify-content: center;
@@ -318,7 +338,7 @@ div.cover {
   height: 100vh;
 }
 
-/* line 263, ../sass/style.scss */
+/* line 279, ../sass/style.scss */
 .attachment-post-thumbnail {
   position: absolute;
   object-fit: cover;
@@ -327,7 +347,7 @@ div.cover {
   height: 100vh;
 }
 
-/* line 270, ../sass/style.scss */
+/* line 286, ../sass/style.scss */
 .title-box {
   display: flex;
   flex-direction: row;
@@ -336,12 +356,12 @@ div.cover {
   width: 94vw;
 }
 
-/* line 278, ../sass/style.scss */
+/* line 294, ../sass/style.scss */
 .explore {
   position: relative;
   top: calc(25vh - 1rem - 9vw / 2);
 }
-/* line 281, ../sass/style.scss */
+/* line 297, ../sass/style.scss */
 .explore a {
   border: 2px solid white;
   color: white;
@@ -350,93 +370,102 @@ div.cover {
   padding: 0.5rem 1rem;
 }
 @media only screen and (min-width: 1025px) {
-  /* line 281, ../sass/style.scss */
+  /* line 297, ../sass/style.scss */
   .explore a {
     font-size: 0.7rem;
   }
 }
-/* line 290, ../sass/style.scss */
+/* line 306, ../sass/style.scss */
 .explore a:hover {
   background-color: white;
   color: black;
   transition: 0.5s;
 }
 
-/* line 301, ../sass/style.scss */
+/* line 317, ../sass/style.scss */
 main {
   align-items: center;
   display: flex;
   flex-flow: column nowrap;
 }
 
-/* line 307, ../sass/style.scss */
-main p, main h3 {
+/* line 323, ../sass/style.scss */
+main p, h3, figcaption, h4 {
   padding: 1rem 16px;
 }
 @media only screen and (min-width: 601px) and (max-width: 1024px) {
-  /* line 307, ../sass/style.scss */
-  main p, main h3 {
+  /* line 323, ../sass/style.scss */
+  main p, h3, figcaption, h4 {
     padding: 1rem calc(3vw);
   }
 }
 @media only screen and (min-width: 1025px) {
-  /* line 307, ../sass/style.scss */
-  main p, main h3 {
+  /* line 323, ../sass/style.scss */
+  main p, h3, figcaption, h4 {
     padding: 1rem calc(3vw + 130px);
   }
 }
 
-/* line 317, ../sass/style.scss */
-main h3 {
+/* line 333, ../sass/style.scss */
+h3 {
   padding-top: 6rem;
+  padding-bottom: 4rem;
 }
 
-/* line 321, ../sass/style.scss */
-img {
+/* line 338, ../sass/style.scss */
+h4 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+/* line 343, ../sass/style.scss */
+#info img {
   width: 100%;
   height: auto;
+  max-height: 75vh;
+  object-fit: cover;
 }
 @media only screen and (min-width: 1025px) {
-  /* line 321, ../sass/style.scss */
-  img {
+  /* line 343, ../sass/style.scss */
+  #info img {
     padding-left: 130px;
     width: calc(100vw - 260px);
   }
 }
 
-/* line 330, ../sass/style.scss */
-.description {
-  font-family: Gosha Sans Light;
-  margin-top: 3vw;
-  font-size: 12px;
-  text-align: center;
+/* line 354, ../sass/style.scss */
+.wp-block-gallery .blocks-gallery-grid {
+  cursor: url(http://jonathanriese.com/aau/web3/wp/wp-content/themes/saving_corals/img/arrow-right.svg), e-resize;
 }
-@media only screen and (min-width: 1025px) {
-  /* line 330, ../sass/style.scss */
-  .description {
-    font-size: 1.5vw;
-  }
+/* line 356, ../sass/style.scss */
+.wp-block-gallery .blocks-gallery-grid li {
+  display: block;
 }
-/* line 338, ../sass/style.scss */
-.description a {
-  color: #c09ce0;
-}
-/* line 340, ../sass/style.scss */
-.description a:hover {
-  text-decoration: underline;
-}
-/* line 344, ../sass/style.scss */
-.description.hide {
+/* line 359, ../sass/style.scss */
+.wp-block-gallery .blocks-gallery-grid li + li {
   display: none;
 }
 
-/* line 349, ../sass/style.scss */
+/* line 364, ../sass/style.scss */
+.wp-block-gallery .blocks-gallery-grid.second-image {
+  cursor: url(http://jonathanriese.com/aau/web3/wp/wp-content/themes/saving_corals/img/arrow-left.svg), w-resize;
+}
+/* line 366, ../sass/style.scss */
+.wp-block-gallery .blocks-gallery-grid.second-image li {
+  display: none;
+}
+/* line 369, ../sass/style.scss */
+.wp-block-gallery .blocks-gallery-grid.second-image li + li {
+  display: block;
+}
+
+/* line 375, ../sass/style.scss */
 iframe {
   width: 100%;
   height: 56.25vw;
 }
 @media only screen and (min-width: 1025px) {
-  /* line 349, ../sass/style.scss */
+  /* line 375, ../sass/style.scss */
   iframe {
     padding-left: 130px;
     width: calc(100vw - 260px);
@@ -444,28 +473,99 @@ iframe {
   }
 }
 
-/* line 359, ../sass/style.scss */
-.section {
-  width: 100%;
-  margin-top: 12vw;
+/* line 385, ../sass/style.scss */
+div.wp-block-group__inner-container {
+  padding: 0 16px;
+  display: flex;
+  flex-flow: column nowrap;
+}
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  /* line 385, ../sass/style.scss */
+  div.wp-block-group__inner-container {
+    padding: 0 3vw;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  /* line 385, ../sass/style.scss */
+  div.wp-block-group__inner-container {
+    padding: 0 calc(3vw + 130px);
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
 }
 
-/* line 367, ../sass/style.scss */
+/* line 401, ../sass/style.scss */
+.card {
+  width: 100%;
+  font-family: Gosha Sans Light;
+  padding: 0;
+}
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  /* line 401, ../sass/style.scss */
+  .card {
+    width: 45%;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  /* line 401, ../sass/style.scss */
+  .card {
+    font-size: 1.5vw;
+    line-height: 2.5vw;
+    width: 45%;
+  }
+}
+/* line 413, ../sass/style.scss */
+.card strong {
+  font-family: Gosha Sans Regular;
+}
+@media only screen and (min-width: 1025px) {
+  /* line 413, ../sass/style.scss */
+  .card strong {
+    font-size: 2vw;
+    line-height: 4vw;
+    padding-bottom: 1vw;
+  }
+}
+/* line 421, ../sass/style.scss */
+.card a {
+  color: #c09ce0;
+}
+/* line 423, ../sass/style.scss */
+.card a:hover {
+  text-decoration: underline;
+}
+
+/* line 429, ../sass/style.scss */
+p.card {
+  margin: 0;
+  margin-block-start: 0;
+  margin-block-end: 2rem;
+}
+
+/* line 438, ../sass/style.scss */
 .footer {
   align-items: flex-end;
   display: flex;
-  font-size: 5vw;
+  font-size: 2rem;
   justify-content: space-between;
   margin-top: 2rem;
   padding: 16px;
 }
-/* line 374, ../sass/style.scss */
+@media only screen and (min-width: 1025px) {
+  /* line 438, ../sass/style.scss */
+  .footer {
+    font-size: 5vw;
+  }
+}
+/* line 448, ../sass/style.scss */
 .footer svg {
   position: relative;
   top: -8px;
   transform: rotate(-90deg);
 }
-/* line 378, ../sass/style.scss */
+/* line 452, ../sass/style.scss */
 .footer svg :hover {
   fill: white;
 }

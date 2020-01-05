@@ -390,18 +390,18 @@ main {
 }
 
 /* line 323, ../sass/style.scss */
-main p, h3, figcaption, h4 {
+main p, h3, figcaption, h4, h1 {
   padding: 1rem 16px;
 }
 @media only screen and (min-width: 601px) and (max-width: 1024px) {
   /* line 323, ../sass/style.scss */
-  main p, h3, figcaption, h4 {
+  main p, h3, figcaption, h4, h1 {
     padding: 1rem calc(3vw);
   }
 }
 @media only screen and (min-width: 1025px) {
   /* line 323, ../sass/style.scss */
-  main p, h3, figcaption, h4 {
+  main p, h3, figcaption, h4, h1 {
     padding: 1rem calc(3vw + 130px);
   }
 }
@@ -568,4 +568,43 @@ p.card {
 /* line 452, ../sass/style.scss */
 .footer svg :hover {
   fill: white;
+}
+
+/* line 460, ../sass/style.scss */
+.blog {
+  text-align: left;
+  align-items: flex-start;
+}
+/* line 463, ../sass/style.scss */
+.blog h1 {
+  font-family: Monument Extended;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+}
+/* line 469, ../sass/style.scss */
+.blog p {
+  padding-top: 0;
+  padding-bottom: 0;
+  margin: 0;
+  font-size: 0.8rem;
+}
+/* line 475, ../sass/style.scss */
+.blog .post-info {
+  color: lightgrey;
+  padding-top: 0;
+  padding-bottom: 0.5rem;
+  text-align: left;
+}
+
+/* line 484, ../sass/style.scss */
+.post p {
+  padding-top: 0.5rem;
+}
+/* line 487, ../sass/style.scss */
+.post strong {
+  text-decoration: underline;
 }

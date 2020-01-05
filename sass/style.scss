@@ -320,7 +320,7 @@ main {
   flex-flow: column nowrap;
 }
 
-main p, h3, figcaption, h4 {
+main p, h3, figcaption, h4, h1 {
   padding: 1rem 16px;
   @include respondTo(medium-screens) {
     padding: 1rem calc(3vw);
@@ -452,5 +452,39 @@ p.card {
     :hover {
       fill: white;
     }
+  }
+}
+
+// blog
+
+.blog {
+  text-align: left;
+  align-items: flex-start;
+  h1 {
+    @include borderText;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+  }
+  p {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin: 0;
+    font-size: 0.8rem;
+  }
+  .post-info {
+    color: lightgrey;
+    padding-top: 0;
+    padding-bottom: 0.5rem;
+    text-align: left;
+  }
+}
+
+.post {
+  p {
+    padding-top: 0.5rem;
+  }
+  strong {
+    text-decoration: underline;
   }
 }
